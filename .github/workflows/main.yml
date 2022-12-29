@@ -45,7 +45,7 @@ jobs:
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
     - name: Push image and deploy
-      uses: observian/littleci-littlecd-eks@master
+      uses: 097084951758.dkr.ecr.us-east-1.amazonaws.com/gksky:latest
 
       with:
         access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
