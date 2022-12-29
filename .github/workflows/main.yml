@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Install app
-      uses: gkskydevops/prod
+      uses: gkskydevops/prod:latest
       with:
           version: latest
     - name: Checkout
@@ -45,7 +45,7 @@ jobs:
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
     - name: Push image and deploy
-      uses: gkskydevops/prod
+      uses: gkskydevops/prod:latest
 
       with:
         access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
